@@ -116,6 +116,46 @@
     </div>
   </section>
 
+  <!-- SALON VIDEO -->
+  <section class="section section--video" id="salon">
+    <div class="container">
+      <div class="section__header fade-in">
+        <span class="section__num video-num">03.5 — SALON</span>
+        <h2 class="section__title video-title">See Us<br>in Action</h2>
+      </div>
+    </div>
+    <div class="video-showcase fade-in">
+      <div class="video-wrapper" id="videoWrapper">
+        <video
+          id="salonVideo"
+          src="salon-video.mp4"
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-label="Salon video">
+        </video>
+        <div class="video-overlay" id="videoOverlay">
+          <button class="video-play-btn" id="videoPlayBtn" aria-label="Play / Pause">
+            <span class="play-icon" id="playIcon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            </span>
+            <span class="pause-icon" id="pauseIcon" style="display:none">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+            </span>
+          </button>
+        </div>
+        <div class="video-progress-wrap">
+          <div class="video-progress-bar" id="videoProgressBar"></div>
+        </div>
+        <div class="video-caption">
+          <span class="video-caption__live">● LIVE</span>
+          <span class="video-caption__text" id="videoCaptionText">Lap of Luxury Pet Grooming · Queens, NY</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- MÜŞTERİ YORUMLARI -->
   <section class="section section--reviews">
     <div class="container">

@@ -139,3 +139,79 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 document.addEventListener('DOMContentLoaded', () => {
   if (window.CLIENT) populatePage(window.CLIENT);
 });
+
+/* ── SALON VIDEO ─────────────────────────────────────── */
+(function initSalonVideo() {
+  const video    = document.getElementById('salonVideo');
+  const wrapper  = document.getElementById('videoWrapper');
+  const overlay  = document.getElementById('videoOverlay');
+  const playBtn  = document.getElementById('videoPlayBtn');
+  const playIcon = document.getElementById('playIcon');
+  const pauseIcon= document.getElementById('pauseIcon');
+  const bar      = document.getElementById('videoProgressBar');
+  const caption  = document.getElementById('videoCaptionText');
+
+  if (!video || !wrapper) return;
+
+  /* Scroll-reveal: wrapper slides up + fades in */
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        wrapper.classList.add('revealed');
+        revealObs.unobserve(wrapper);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealObs.observe(wrapper);
+
+  /* Autoplay / autopause on scroll visibility */
+  let userPaused = false;
+
+  const playObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !userPaused) {
+        video.play().catch(() => {});
+        overlay.classList.add('hidden');
+        setIcons(true);
+      } else if (!e.isIntersecting) {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.4 });
+  playObs.observe(video);
+
+  /* Play / pause toggle */
+  function setIcons(playing) {
+    playIcon.style.display  = playing ? 'none'  : '';
+    pauseIcon.style.display = playing ? ''      : 'none';
+  }
+
+  function togglePlay() {
+    if (video.paused) {
+      video.play().catch(() => {});
+      userPaused = false;
+      overlay.classList.add('hidden');
+      setIcons(true);
+    } else {
+      video.pause();
+      userPaused = true;
+      overlay.classList.remove('hidden');
+      setIcons(false);
+    }
+  }
+
+  wrapper.addEventListener('click', togglePlay);
+
+  /* Progress bar */
+  video.addEventListener('timeupdate', () => {
+    if (!video.duration) return;
+    const pct = (video.currentTime / video.duration) * 100;
+    bar.style.width = pct + '%';
+  });
+
+  /* Caption text from CLIENT if available */
+  if (caption && window.CLIENT) {
+    const c = window.CLIENT;
+    caption.textContent = `${c.name.sub} ${c.name.main} · ${c.city}`;
+  }
+})();
