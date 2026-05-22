@@ -1,20 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lap of Luxury Pet Grooming — Best pet stylist in Queens, NY. Professional grooming, bath &amp; blowout, nail trim, and bow tie finishes. Est. 2012. Text to book.">
-  <title>Lap of Luxury Pet Grooming | Queens, NY</title>
+  <meta name="description" id="meta-desc" content="">
+  <title id="page-title"></title>
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    :root {
-      --primary: #7B2D8B;
-      --text:    #5C4A6B;
-      --dark:    #1A0A2E;
-    }
-  </style>
 </head>
 <body>
 
@@ -22,17 +15,17 @@
   <nav class="nav" id="nav">
     <div class="container nav__inner">
       <a href="#" class="nav__logo">
-        <span class="nav__logo-sub">LAP OF LUXURY</span>
-        <span class="nav__logo-main">PET GROOMING</span>
+        <span class="nav__logo-sub" data-field="name.sub"></span>
+        <span class="nav__logo-main" data-field="name.main"></span>
       </a>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#hizmetler">Hizmetler</a></li>
+        <li><a href="#hakkimizda">Hakkımızda</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
       </ul>
-      <a href="https://wa.me/19172144498" target="_blank" rel="noopener" class="btn btn--primary nav__cta">Book Now</a>
-      <button class="nav__burger" id="navBurger" aria-label="Open menu">
+      <a href="#" data-wa class="btn btn--primary nav__cta">Rezervasyon Yap</a>
+      <button class="nav__burger" id="navBurger" aria-label="Menüyü aç">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -43,191 +36,177 @@
     <div class="hero__left">
       <div class="hero__content">
         <div class="hero__eyebrow">
-          <span class="hero__badge">⭐ 4.7</span>
-          <span>74 Google Reviews · Queens, NY</span>
+          <span class="hero__badge" id="hero-badge"></span>
+          <span id="hero-eyebrow"></span>
         </div>
         <h1 class="hero__title">
-          <span class="hero__title-sub">LAP OF LUXURY</span>
-          <span class="hero__title-main">PET<br>GROOMING</span>
+          <span class="hero__title-sub" data-field="name.sub"></span>
+          <span class="hero__title-main" id="hero-title-main"></span>
         </h1>
-        <p class="hero__desc">Queens' premier pet grooming salon since 2012 — professional styling, spa baths, nail trims, and that signature bow tie finish your pup deserves.</p>
+        <p class="hero__desc" data-field="tagline"></p>
         <div class="hero__actions">
-          <a href="https://wa.me/19172144498" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+          <a href="#" data-wa class="btn btn--primary btn--lg">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.526 5.847L0 24l6.335-1.488A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.645-.493-5.17-1.355l-.369-.218-3.826.899.942-3.718-.24-.382A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-            Text to Book
+            WhatsApp'tan Yaz
           </a>
-          <a href="tel:+19172144498" class="btn btn--outline btn--lg">
+          <a href="#" data-tel class="btn btn--outline btn--lg">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.69A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg>
-            Call Us
+            Bizi Ara
           </a>
         </div>
-        <div class="hero__services-row">
-          <span>✂️ Grooming</span><span class="dot">·</span>
-          <span>🛁 Bath &amp; Blowout</span><span class="dot">·</span>
-          <span>💅 Nail Trim</span><span class="dot">·</span>
-          <span>🎀 Bow Tie Finish</span>
-        </div>
+        <div class="hero__services-row" id="hero-services"></div>
       </div>
     </div>
     <div class="hero__right">
-      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&h=1400&fit=crop&crop=center&q=85" alt="Beautifully groomed dog" loading="eager" width="1200" height="1400">
+      <img id="hero-img" src="" alt="" loading="eager" width="1200" height="1400">
       <div class="hero__img-overlay"></div>
       <div class="hero__img-badge">
-        <strong>4.7</strong>
+        <strong id="hero-badge-rating"></strong>
         <span>★★★★½</span>
-        <small>74 reviews</small>
+        <small id="hero-badge-count"></small>
       </div>
     </div>
   </section>
 
   <!-- STATS BAR -->
   <div class="stats-bar">
-    <div class="container stats-bar__inner">
-      <div class="stat-item"><strong>74+</strong><span>Happy Clients</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat-item"><strong>4.7★</strong><span>Google Rating</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat-item"><strong>Est. 2012</strong><span>Serving Queens</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat-item"><strong>Hollis</strong><span>Jamaica Ave, NY</span></div>
-    </div>
+    <div class="container stats-bar__inner" id="stats-bar-inner"></div>
   </div>
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
+  <!-- HİZMETLER -->
+  <section class="section" id="hizmetler">
     <div class="container">
       <div class="section__header fade-in">
-        <span class="section__num">01 — SERVICES</span>
-        <h2 class="section__title">What We Offer</h2>
+        <span class="section__num">01 — HİZMETLER</span>
+        <h2 class="section__title">Ne Sunuyoruz?</h2>
       </div>
-      <div class="services__grid fade-in">
-        <div class="service-card">
-          <div class="service-card__top"><span class="service-card__icon">✂️</span><span class="service-card__num">01</span></div>
-          <h3>Full Grooming</h3>
-          <p>Complete breed-specific styling: bath, blowout, haircut, ear cleaning, and a fresh finish your pup will love.</p>
-          <a href="tel:+19172144498" class="service-card__link">Book Now →</a>
-        </div>
-        <div class="service-card">
-          <div class="service-card__top"><span class="service-card__icon">🛁</span><span class="service-card__num">02</span></div>
-          <h3>Bath &amp; Blowout</h3>
-          <p>Premium shampoo, deep conditioner, and a professional blowout — leaving your pet clean, fluffy, and smelling amazing.</p>
-          <a href="tel:+19172144498" class="service-card__link">Book Now →</a>
-        </div>
-        <div class="service-card">
-          <div class="service-card__top"><span class="service-card__icon">💅</span><span class="service-card__num">03</span></div>
-          <h3>Nail Trim</h3>
-          <p>Quick, stress-free nail trims to keep your pet comfortable and your floors scratch-free.</p>
-          <a href="tel:+19172144498" class="service-card__link">Book Now →</a>
-        </div>
-        <div class="service-card service-card--accent">
-          <div class="service-card__top"><span class="service-card__icon">🎀</span><span class="service-card__num">04</span></div>
-          <h3>Bow Tie &amp; Accessories</h3>
-          <p>Every groom ends with a stylish bow tie or bandana — because royalty deserves the finishing touch.</p>
-          <a href="https://wa.me/19172144498" target="_blank" rel="noopener" class="service-card__link">Text Us →</a>
-        </div>
-      </div>
+      <div class="services__grid fade-in" id="services-grid"></div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="section section--alt" id="about">
+  <!-- HAKKIMIZDA -->
+  <section class="section section--alt" id="hakkimizda">
     <div class="container about__inner fade-in">
       <div class="about__image">
-        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800&q=85" alt="Happy dogs at Lap of Luxury" loading="lazy" width="800" height="1000">
-        <div class="about__img-tag">Hollis · Queens, NY</div>
+        <img id="about-img" src="" alt="" loading="lazy" width="800" height="1000">
+        <div class="about__img-tag" id="about-img-tag"></div>
       </div>
       <div class="about__content">
-        <span class="section__num">02 — ABOUT US</span>
-        <h2 class="section__title">We Genuinely<br>Love Animals.</h2>
-        <p>Founded in 2012, Lap of Luxury Pet Grooming has been Queens' most trusted destination for professional pet styling. Our expert groomer brings passion, precision, and a genuine love for animals to every appointment — whether it's a classic breed cut, a spa bath, or a custom creative style. We're appointment-only and require up-to-date vaccinations, because your pet's safety and comfort always come first.</p>
-        <p>We are proudly a Black-owned, veteran-owned, women-owned, and Latino-owned small business rooted in the Hollis community. From your dog's first groom to their tenth year of luxury visits, we treat every furry guest like royalty. Text us to schedule — we can't wait to meet your four-legged family member.</p>
+        <span class="section__num">02 — HAKKIMIZDA</span>
+        <h2 class="section__title">Hayvanları Gerçekten<br>Seviyoruz.</h2>
+        <div id="about-text"></div>
         <div class="about__stats">
-          <div class="stat"><strong>74+</strong><span>Google Reviews</span></div>
-          <div class="stat"><strong>4.7★</strong><span>Average Rating</span></div>
-          <div class="stat"><strong>Est. 2012</strong><span>Trusted Since</span></div>
+          <div class="stat"><strong id="about-stat-reviews"></strong><span>Google Yorumu</span></div>
+          <div class="stat"><strong id="about-stat-rating"></strong><span>Ortalama Puan</span></div>
+          <div class="stat"><strong>%100</strong><span>Müşteri Memnuniyeti</span></div>
         </div>
-        <a href="https://wa.me/19172144498" target="_blank" rel="noopener" class="btn btn--primary btn--lg" style="margin-top:2rem;align-self:flex-start">Book Appointment</a>
+        <a href="#" data-wa class="btn btn--primary btn--lg" style="margin-top:2rem;align-self:flex-start">Randevu Al</a>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section class="section" id="gallery">
+  <!-- GALERİ -->
+  <section class="section" id="galeri">
     <div class="container">
       <div class="section__header fade-in">
-        <span class="section__num">03 — GALLERY</span>
-        <h2 class="section__title">Happy Faces<br>After Every Groom</h2>
+        <span class="section__num">03 — GALERİ</span>
+        <h2 class="section__title">Bakım Sonrası<br>Mutlu Yüzler</h2>
       </div>
-      <div class="gallery__grid fade-in">
-        <div class="gallery__item gallery__item--tall">
-          <img src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?w=600&q=85" alt="Freshly groomed fluffy dog" loading="lazy" width="600" height="800">
-          <div class="gallery__overlay"><span>After Groom</span></div>
+      <div class="gallery__grid fade-in" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- SALON VIDEO -->
+  <section class="section section--video" id="salon">
+    <div class="container">
+      <div class="section__header fade-in">
+        <span class="section__num video-num">03.5 — SALON</span>
+        <h2 class="section__title video-title">See Us<br>in Action</h2>
+      </div>
+    </div>
+    <div class="video-showcase fade-in">
+      <div class="video-wrapper" id="videoWrapper">
+        <video
+          id="salonVideo"
+          src="salon-video.mp4"
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-label="Salon video">
+        </video>
+        <div class="video-overlay" id="videoOverlay">
+          <button class="video-play-btn" id="videoPlayBtn" aria-label="Play / Pause">
+            <span class="play-icon" id="playIcon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            </span>
+            <span class="pause-icon" id="pauseIcon" style="display:none">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+            </span>
+          </button>
         </div>
-        <div class="gallery__item">
-          <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=85" alt="Dog grooming session" loading="lazy" width="600" height="600">
-          <div class="gallery__overlay"><span>Grooming</span></div>
+        <div class="video-progress-wrap">
+          <div class="video-progress-bar" id="videoProgressBar"></div>
         </div>
-        <div class="gallery__item">
-          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600&q=85" alt="Happy dog with bow" loading="lazy" width="600" height="600">
-          <div class="gallery__overlay"><span>Bow Tie Finish</span></div>
-        </div>
-        <div class="gallery__item">
-          <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&q=85" alt="Cute dog portrait" loading="lazy" width="600" height="600">
-          <div class="gallery__overlay"><span>Fresh &amp; Clean</span></div>
-        </div>
-        <div class="gallery__item gallery__item--wide">
-          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=900&q=85" alt="Happy groomed dog smiling" loading="lazy" width="900" height="600">
-          <div class="gallery__overlay"><span>Happy Pups</span></div>
+        <div class="video-caption">
+          <span class="video-caption__live">● LIVE</span>
+          <span class="video-caption__text" id="videoCaptionText">Lap of Luxury Pet Grooming · Queens, NY</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- REVIEWS -->
+  <!-- MÜŞTERİ YORUMLARI -->
   <section class="section section--reviews">
     <div class="container">
       <div class="section__header fade-in">
-        <span class="section__num" style="color:var(--primary)">04 — REVIEWS</span>
-        <h2 class="section__title" style="color:#fff">What Our Clients<br>Are Saying</h2>
+        <span class="section__num" style="color:var(--primary)">04 — YORUMLAR</span>
+        <h2 class="section__title" style="color:#fff">Müşterilerimiz<br>Ne Diyor?</h2>
       </div>
     </div>
     <div class="reviews__marquee-wrap">
-      <div class="reviews__track">
-        <div class="review-card"><div class="review-card__stars">★★★★★</div><p>"My original groomer miss-scheduled me and I had to find someone last minute. Thank God I called Lap of Luxury — they fit me in within an hour. Absolutely amazing!"</p><span class="review-card__author">— Cris Abreu</span></div>
-        <div class="review-card"><div class="review-card__stars">★★★★★</div><p>"A-mazinggggg! My Mocha loves coming here for grooming. I love the added bow ties — neat, clean cut, and so efficient. She's so loving with pets, you won't regret it."</p><span class="review-card__author">— J Wilson</span></div>
-        <div class="review-card"><div class="review-card__stars">★★★★★</div><p>"My dog Jozephine has been coming here for about 10 years. The salon grew into an amazing space where animals get the care they need and deserve."</p><span class="review-card__author">— The Divine Comfy Couch</span></div>
-        <div class="review-card"><div class="review-card__stars">★★★★★</div><p>"This place always has great toys and treats for my dogs. My furry babies were given the most amazing treatment — truly a luxury experience!"</p><span class="review-card__author">— Google Review</span></div>
-        <div class="review-card"><div class="review-card__stars">★★★★★</div><p>"Lap of Luxury should offer services to humans as well — that's how good they are. My pets come out looking like royalty every single time."</p><span class="review-card__author">— Google Review</span></div>
-        <div class="review-card"><div class="review-card__stars">★★★★★</div><p>"My furry babies were given the most amazing treatment. Professional, caring, and the results speak for themselves. Highly recommend!"</p><span class="review-card__author">— Google Review</span></div>
-        <div class="review-card"><div class="review-card__stars">★★★★★</div><p>"Best groomer in Queens, hands down. Text to book is super easy, and my dog always comes home looking and smelling incredible."</p><span class="review-card__author">— Google Review</span></div>
-        <div class="review-card"><div class="review-card__stars">★★★★★</div><p>"Been a loyal customer for years. The quality is always consistent, the groomer truly loves animals, and the bow tie finish is the cutest touch!"</p><span class="review-card__author">— Google Review</span></div>
-        <div class="review-card"><div class="review-card__stars">★★★★★</div><p>"My original groomer miss-scheduled me and I had to find someone last minute. Thank God I called Lap of Luxury — they fit me in within an hour. Absolutely amazing!"</p><span class="review-card__author">— Cris Abreu</span></div>
-        <div class="review-card"><div class="review-card__stars">★★★★★</div><p>"A-mazinggggg! My Mocha loves coming here for grooming. I love the added bow ties — neat, clean cut, and so efficient."</p><span class="review-card__author">— J Wilson</span></div>
-        <div class="review-card"><div class="review-card__stars">★★★★★</div><p>"My dog Jozephine has been coming here for about 10 years. Truly an amazing space where animals get the care they deserve."</p><span class="review-card__author">— The Divine Comfy Couch</span></div>
-        <div class="review-card"><div class="review-card__stars">★★★★★</div><p>"Lap of Luxury should offer services to humans as well — that's how good they are!"</p><span class="review-card__author">— Google Review</span></div>
-      </div>
+      <div class="reviews__track" id="reviews-track"></div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
+  <!-- İLETİŞİM -->
+  <section class="section" id="iletisim">
     <div class="container">
       <div class="section__header fade-in">
-        <span class="section__num">05 — CONTACT</span>
-        <h2 class="section__title">Get in Touch</h2>
+        <span class="section__num">05 — İLETİŞİM</span>
+        <h2 class="section__title">Bize Ulaşın</h2>
       </div>
       <div class="contact__inner fade-in">
         <div class="contact__info">
-          <div class="contact__item"><div class="contact__icon">📍</div><div><strong>Address</strong><p>187-52 Jamaica Ave, Hollis, NY 11423</p></div></div>
-          <div class="contact__item"><div class="contact__icon">📞</div><div><strong>Phone</strong><p><a href="tel:+19172144498">+1 917-214-4498</a></p></div></div>
-          <div class="contact__item"><div class="contact__icon">🕐</div><div><strong>Hours</strong><p>Mon – Sat: 9:00 AM – 6:00 PM</p><p>Text to book · No walk-ins · Vaccinations required</p></div></div>
+          <div class="contact__item">
+            <div class="contact__icon" aria-hidden="true">📍</div>
+            <div><strong>Adres</strong><p id="contact-address"></p></div>
+          </div>
+          <div class="contact__item">
+            <div class="contact__icon" aria-hidden="true">📞</div>
+            <div><strong>Telefon</strong><p><a data-tel id="contact-phone" href="#"></a></p></div>
+          </div>
+          <div class="contact__item">
+            <div class="contact__icon" aria-hidden="true">🕐</div>
+            <div><strong>Çalışma Saatleri</strong><div id="contact-hours"></div></div>
+          </div>
           <div class="contact__actions">
-            <a href="https://wa.me/19172144498" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Text to Book</a>
-            <a href="tel:+19172144498" class="btn btn--outline btn--lg">Call Us</a>
+            <a href="#" data-wa class="btn btn--primary btn--lg">WhatsApp'tan Yaz</a>
+            <a href="#" data-tel class="btn btn--outline btn--lg">Bizi Ara</a>
           </div>
         </div>
         <div class="contact__map">
-          <iframe src="https://maps.google.com/maps?q=187-52+Jamaica+Ave+Hollis+NY+11423&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="420" style="border:0;border-radius:12px;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lap of Luxury Pet Grooming Location"></iframe>
+          <iframe
+            id="contact-map"
+            src=""
+            width="100%"
+            height="420"
+            style="border:0;border-radius:12px;display:block;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Konum">
+          </iframe>
         </div>
       </div>
     </div>
@@ -237,20 +216,21 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <span class="footer__logo-sub">LAP OF LUXURY</span>
-        <span class="footer__logo-main">PET GROOMING</span>
+        <span class="footer__logo-sub" data-field="name.sub"></span>
+        <span class="footer__logo-main" data-field="name.main"></span>
       </div>
       <div class="footer__links">
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-        <a href="https://www.instagram.com/lapofluxurypetgrooming" target="_blank" rel="noopener">Instagram →</a>
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#iletisim">İletişim</a>
+        <a id="footer-instagram" href="#" target="_blank" rel="noopener">Instagram →</a>
       </div>
-      <p class="footer__copy">© 2025 Lap of Luxury Pet Grooming. Hollis, Queens, NY.</p>
+      <p class="footer__copy">© 2025 <span data-field="name.sub"></span> <span data-field="name.main"></span>. <span data-field="city"></span>.</p>
     </div>
   </footer>
 
-  <a href="https://wa.me/19172144498" target="_blank" rel="noopener" class="fab" aria-label="Text us on WhatsApp">
+  <!-- FLOATING WHATSAPP -->
+  <a href="#" data-wa class="fab" aria-label="WhatsApp ile yaz">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.526 5.847L0 24l6.335-1.488A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.645-.493-5.17-1.355l-.369-.218-3.826.899.942-3.718-.24-.382A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
   </a>
 
